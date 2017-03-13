@@ -1,0 +1,18 @@
+Milestone 0: 
+Command clicking on class name opens up all methods associated with that view controller class. dismiss() is listed here which we will use to dismiss a view controller. 
+
+Wai 
+
+Milestone 1:
+NewsTableViewController: viewDidLoad, viewWillAppear
+CreateNewsViewController: viewDidLoad, viewWillDisappear
+
+Yash
+
+Milestone 5: 
+Part of the issue is that the dataSource method must be changed to include the NewsData's methods along with specifying the number of sections and rows for the table. Lastly, in order for the new post to appear, the table must be modified and have a new cell added when needed.
+
+To have the keyboard disappear before the CreateNewsViewController goes away, we will put the methods in the viewWillDisappear(_: animated Bool) function.
+
+Yes, they appear with the last one first.
+

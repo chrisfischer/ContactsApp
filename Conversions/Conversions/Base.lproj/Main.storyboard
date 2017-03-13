@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Conversions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQL-95-4la">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYw-ee-f0R">
+                                <rect key="frame" x="0.0" y="224" width="375" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="EW5-T4-gQO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert value to convert" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yc8-Yn-g6I">
+                                <rect key="frame" x="8" y="274" width="358" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="XQX-jo-7SY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XQX-jo-7SY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="HHP-ca-aia"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="yc8-Yn-g6I" firstAttribute="top" secondItem="qYw-ee-f0R" secondAttribute="bottom" constant="8" symbolic="YES" id="AAy-pw-dyz"/>
+                            <constraint firstItem="yc8-Yn-g6I" firstAttribute="centerY" secondItem="qYw-ee-f0R" secondAttribute="centerY" id="L5o-c1-gvk"/>
+                            <constraint firstItem="qYw-ee-f0R" firstAttribute="leading" secondItem="yc8-Yn-g6I" secondAttribute="leading" constant="-8" id="NKP-Pb-W61"/>
+                            <constraint firstItem="IQL-95-4la" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PEV-oH-FjH"/>
+                            <constraint firstItem="IQL-95-4la" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QzL-px-mbq"/>
+                            <constraint firstItem="IQL-95-4la" firstAttribute="trailing" secondItem="qYw-ee-f0R" secondAttribute="trailing" id="m8X-sB-7jR"/>
+                            <constraint firstAttribute="trailing" secondItem="IQL-95-4la" secondAttribute="trailing" id="mjw-Un-NiG"/>
+                            <constraint firstItem="yc8-Yn-g6I" firstAttribute="leading" secondItem="IQL-95-4la" secondAttribute="leading" id="nXP-7I-hqj"/>
+                            <constraint firstItem="qYw-ee-f0R" firstAttribute="top" secondItem="IQL-95-4la" secondAttribute="bottom" constant="8" symbolic="YES" id="r7u-uO-9X2"/>
+                            <constraint firstItem="IQL-95-4la" firstAttribute="leading" secondItem="qYw-ee-f0R" secondAttribute="leading" id="u93-PE-rz0"/>
+                            <constraint firstItem="yc8-Yn-g6I" firstAttribute="top" secondItem="IQL-95-4la" secondAttribute="bottom" constant="8" symbolic="YES" id="vD2-IL-lU3"/>
+                            <constraint firstItem="qYw-ee-f0R" firstAttribute="trailing" secondItem="yc8-Yn-g6I" secondAttribute="trailing" constant="9" id="w0n-8f-9LD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="L5o-c1-gvk"/>
+                                <exclude reference="nXP-7I-hqj"/>
+                                <exclude reference="vD2-IL-lU3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="yc8-Yn-g6I" id="1ga-kB-5aa"/>
+                        <outlet property="outputText" destination="qYw-ee-f0R" id="yDX-pY-jAc"/>
+                        <outlet property="pickerView" destination="IQL-95-4la" id="dLp-5v-ks4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.80000000000001" y="297.30134932533736"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6104CC9C1E7E3D7600D2DDD8 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104CC9B1E7E3D7600D2DDD8 /* ShopInfoViewController.swift */; };
+		6104CC9E1E7E3DA700D2DDD8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104CC9D1E7E3DA700D2DDD8 /* DetailsViewController.swift */; };
+		6104CCA01E7E3DB100D2DDD8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104CC9F1E7E3DB100D2DDD8 /* MenuViewController.swift */; };
+		614114B81E7B2A80002E1232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614114B71E7B2A80002E1232 /* AppDelegate.swift */; };
+		614114BA1E7B2A80002E1232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614114B91E7B2A80002E1232 /* ViewController.swift */; };
+		614114BD1E7B2A80002E1232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 614114BB1E7B2A80002E1232 /* Main.storyboard */; };
+		614114C01E7B2A80002E1232 /* Caffinator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 614114BE1E7B2A80002E1232 /* Caffinator.xcdatamodeld */; };
+		614114C21E7B2A80002E1232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 614114C11E7B2A80002E1232 /* Assets.xcassets */; };
+		614114C51E7B2A80002E1232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 614114C31E7B2A80002E1232 /* LaunchScreen.storyboard */; };
+		614114D01E7B2A81002E1232 /* CaffinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614114CF1E7B2A81002E1232 /* CaffinatorTests.swift */; };
+		614114DB1E7B2A81002E1232 /* CaffinatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614114DA1E7B2A81002E1232 /* CaffinatorUITests.swift */; };
+		614114E91E7B34F0002E1232 /* ShopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614114E81E7B34F0002E1232 /* ShopAnnotation.swift */; };
+		61BDE8981E81D68200FE6644 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE8971E81D68200FE6644 /* NetworkManager.swift */; };
+		61F835341E82FDB9008B04BC /* Penn Campus.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 61F835331E82FDB9008B04BC /* Penn Campus.gpx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		614114CC1E7B2A81002E1232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 614114AC1E7B2A80002E1232 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 614114B31E7B2A80002E1232;
+			remoteInfo = Caffinator;
+		};
+		614114D71E7B2A81002E1232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 614114AC1E7B2A80002E1232 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 614114B31E7B2A80002E1232;
+			remoteInfo = Caffinator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6104CC9B1E7E3D7600D2DDD8 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopInfoViewController.swift; sourceTree = "<group>"; };
+		6104CC9D1E7E3DA700D2DDD8 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		6104CC9F1E7E3DB100D2DDD8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		614114B41E7B2A80002E1232 /* Caffinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caffinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		614114B71E7B2A80002E1232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		614114B91E7B2A80002E1232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		614114BC1E7B2A80002E1232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		614114BF1E7B2A80002E1232 /* Caffinator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Caffinator.xcdatamodel; sourceTree = "<group>"; };
+		614114C11E7B2A80002E1232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		614114C41E7B2A80002E1232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		614114C61E7B2A80002E1232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		614114CB1E7B2A81002E1232 /* CaffinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaffinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		614114CF1E7B2A81002E1232 /* CaffinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffinatorTests.swift; sourceTree = "<group>"; };
+		614114D11E7B2A81002E1232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		614114D61E7B2A81002E1232 /* CaffinatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaffinatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		614114DA1E7B2A81002E1232 /* CaffinatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffinatorUITests.swift; sourceTree = "<group>"; };
+		614114DC1E7B2A81002E1232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		614114E81E7B34F0002E1232 /* ShopAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopAnnotation.swift; sourceTree = "<group>"; };
+		61BDE8971E81D68200FE6644 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		61F835331E82FDB9008B04BC /* Penn Campus.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Penn Campus.gpx"; path = "../Penn Campus.gpx"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		614114B11E7B2A80002E1232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		614114C81E7B2A81002E1232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		614114D31E7B2A81002E1232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6104CCA11E7E3DB900D2DDD8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6104CC9D1E7E3DA700D2DDD8 /* DetailsViewController.swift */,
+				6104CC9F1E7E3DB100D2DDD8 /* MenuViewController.swift */,
+				6104CC9B1E7E3D7600D2DDD8 /* ShopInfoViewController.swift */,
+				614114B91E7B2A80002E1232 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		614114AB1E7B2A80002E1232 = {
+			isa = PBXGroup;
+			children = (
+				61F835331E82FDB9008B04BC /* Penn Campus.gpx */,
+				614114B61E7B2A80002E1232 /* Caffinator */,
+				614114CE1E7B2A81002E1232 /* CaffinatorTests */,
+				614114D91E7B2A81002E1232 /* CaffinatorUITests */,
+				614114B51E7B2A80002E1232 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		614114B51E7B2A80002E1232 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				614114B41E7B2A80002E1232 /* Caffinator.app */,
+				614114CB1E7B2A81002E1232 /* CaffinatorTests.xctest */,
+				614114D61E7B2A81002E1232 /* CaffinatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		614114B61E7B2A80002E1232 /* Caffinator */ = {
+			isa = PBXGroup;
+			children = (
+				614114B71E7B2A80002E1232 /* AppDelegate.swift */,
+				6104CCA11E7E3DB900D2DDD8 /* ViewControllers */,
+				61BDE8971E81D68200FE6644 /* NetworkManager.swift */,
+				614114E81E7B34F0002E1232 /* ShopAnnotation.swift */,
+				614114BB1E7B2A80002E1232 /* Main.storyboard */,
+				614114C11E7B2A80002E1232 /* Assets.xcassets */,
+				614114C31E7B2A80002E1232 /* LaunchScreen.storyboard */,
+				614114C61E7B2A80002E1232 /* Info.plist */,
+				614114BE1E7B2A80002E1232 /* Caffinator.xcdatamodeld */,
+			);
+			path = Caffinator;
+			sourceTree = "<group>";
+		};
+		614114CE1E7B2A81002E1232 /* CaffinatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				614114CF1E7B2A81002E1232 /* CaffinatorTests.swift */,
+				614114D11E7B2A81002E1232 /* Info.plist */,
+			);
+			path = CaffinatorTests;
+			sourceTree = "<group>";
+		};
+		614114D91E7B2A81002E1232 /* CaffinatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				614114DA1E7B2A81002E1232 /* CaffinatorUITests.swift */,
+				614114DC1E7B2A81002E1232 /* Info.plist */,
+			);
+			path = CaffinatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		614114B31E7B2A80002E1232 /* Caffinator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 614114DF1E7B2A81002E1232 /* Build configuration list for PBXNativeTarget "Caffinator" */;
+			buildPhases = (
+				614114B01E7B2A80002E1232 /* Sources */,
+				614114B11E7B2A80002E1232 /* Frameworks */,
+				614114B21E7B2A80002E1232 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Caffinator;
+			productName = Caffinator;
+			productReference = 614114B41E7B2A80002E1232 /* Caffinator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		614114CA1E7B2A81002E1232 /* CaffinatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 614114E21E7B2A81002E1232 /* Build configuration list for PBXNativeTarget "CaffinatorTests" */;
+			buildPhases = (
+				614114C71E7B2A81002E1232 /* Sources */,
+				614114C81E7B2A81002E1232 /* Frameworks */,
+				614114C91E7B2A81002E1232 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				614114CD1E7B2A81002E1232 /* PBXTargetDependency */,
+			);
+			name = CaffinatorTests;
+			productName = CaffinatorTests;
+			productReference = 614114CB1E7B2A81002E1232 /* CaffinatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		614114D51E7B2A81002E1232 /* CaffinatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 614114E51E7B2A81002E1232 /* Build configuration list for PBXNativeTarget "CaffinatorUITests" */;
+			buildPhases = (
+				614114D21E7B2A81002E1232 /* Sources */,
+				614114D31E7B2A81002E1232 /* Frameworks */,
+				614114D41E7B2A81002E1232 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				614114D81E7B2A81002E1232 /* PBXTargetDependency */,
+			);
+			name = CaffinatorUITests;
+			productName = CaffinatorUITests;
+			productReference = 614114D61E7B2A81002E1232 /* CaffinatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		614114AC1E7B2A80002E1232 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Chris Fischer";
+				TargetAttributes = {
+					614114B31E7B2A80002E1232 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N4963EZCDT;
+						ProvisioningStyle = Automatic;
+					};
+					614114CA1E7B2A81002E1232 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N4963EZCDT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 614114B31E7B2A80002E1232;
+					};
+					614114D51E7B2A81002E1232 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N4963EZCDT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 614114B31E7B2A80002E1232;
+					};
+				};
+			};
+			buildConfigurationList = 614114AF1E7B2A80002E1232 /* Build configuration list for PBXProject "Caffinator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 614114AB1E7B2A80002E1232;
+			productRefGroup = 614114B51E7B2A80002E1232 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				614114B31E7B2A80002E1232 /* Caffinator */,
+				614114CA1E7B2A81002E1232 /* CaffinatorTests */,
+				614114D51E7B2A81002E1232 /* CaffinatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		614114B21E7B2A80002E1232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				614114C51E7B2A80002E1232 /* LaunchScreen.storyboard in Resources */,
+				614114C21E7B2A80002E1232 /* Assets.xcassets in Resources */,
+				61F835341E82FDB9008B04BC /* Penn Campus.gpx in Resources */,
+				614114BD1E7B2A80002E1232 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		614114C91E7B2A81002E1232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		614114D41E7B2A81002E1232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		614114B01E7B2A80002E1232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6104CC9C1E7E3D7600D2DDD8 /* ShopInfoViewController.swift in Sources */,
+				614114C01E7B2A80002E1232 /* Caffinator.xcdatamodeld in Sources */,
+				614114BA1E7B2A80002E1232 /* ViewController.swift in Sources */,
+				6104CCA01E7E3DB100D2DDD8 /* MenuViewController.swift in Sources */,
+				61BDE8981E81D68200FE6644 /* NetworkManager.swift in Sources */,
+				614114B81E7B2A80002E1232 /* AppDelegate.swift in Sources */,
+				614114E91E7B34F0002E1232 /* ShopAnnotation.swift in Sources */,
+				6104CC9E1E7E3DA700D2DDD8 /* DetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		614114C71E7B2A81002E1232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				614114D01E7B2A81002E1232 /* CaffinatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		614114D21E7B2A81002E1232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				614114DB1E7B2A81002E1232 /* CaffinatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		614114CD1E7B2A81002E1232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 614114B31E7B2A80002E1232 /* Caffinator */;
+			targetProxy = 614114CC1E7B2A81002E1232 /* PBXContainerItemProxy */;
+		};
+		614114D81E7B2A81002E1232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 614114B31E7B2A80002E1232 /* Caffinator */;
+			targetProxy = 614114D71E7B2A81002E1232 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		614114BB1E7B2A80002E1232 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				614114BC1E7B2A80002E1232 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		614114C31E7B2A80002E1232 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				614114C41E7B2A80002E1232 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		614114DD1E7B2A81002E1232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		614114DE1E7B2A81002E1232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		614114E01E7B2A81002E1232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N4963EZCDT;
+				INFOPLIST_FILE = Caffinator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fischer.Caffinator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		614114E11E7B2A81002E1232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N4963EZCDT;
+				INFOPLIST_FILE = Caffinator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fischer.Caffinator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		614114E31E7B2A81002E1232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = N4963EZCDT;
+				INFOPLIST_FILE = CaffinatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fischer.CaffinatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Caffinator.app/Caffinator";
+			};
+			name = Debug;
+		};
+		614114E41E7B2A81002E1232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = N4963EZCDT;
+				INFOPLIST_FILE = CaffinatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fischer.CaffinatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Caffinator.app/Caffinator";
+			};
+			name = Release;
+		};
+		614114E61E7B2A81002E1232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = N4963EZCDT;
+				INFOPLIST_FILE = CaffinatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fischer.CaffinatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Caffinator;
+			};
+			name = Debug;
+		};
+		614114E71E7B2A81002E1232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = N4963EZCDT;
+				INFOPLIST_FILE = CaffinatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fischer.CaffinatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Caffinator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		614114AF1E7B2A80002E1232 /* Build configuration list for PBXProject "Caffinator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				614114DD1E7B2A81002E1232 /* Debug */,
+				614114DE1E7B2A81002E1232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		614114DF1E7B2A81002E1232 /* Build configuration list for PBXNativeTarget "Caffinator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				614114E01E7B2A81002E1232 /* Debug */,
+				614114E11E7B2A81002E1232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		614114E21E7B2A81002E1232 /* Build configuration list for PBXNativeTarget "CaffinatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				614114E31E7B2A81002E1232 /* Debug */,
+				614114E41E7B2A81002E1232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		614114E51E7B2A81002E1232 /* Build configuration list for PBXNativeTarget "CaffinatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				614114E61E7B2A81002E1232 /* Debug */,
+				614114E71E7B2A81002E1232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		614114BE1E7B2A80002E1232 /* Caffinator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				614114BF1E7B2A80002E1232 /* Caffinator.xcdatamodel */,
+			);
+			currentVersion = 614114BF1E7B2A80002E1232 /* Caffinator.xcdatamodel */;
+			path = Caffinator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 614114AC1E7B2A80002E1232 /* Project object */;
+}

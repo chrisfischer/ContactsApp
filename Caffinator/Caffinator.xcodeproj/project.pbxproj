@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6104CC9C1E7E3D7600D2DDD8 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104CC9B1E7E3D7600D2DDD8 /* ShopInfoViewController.swift */; };
 		6104CC9E1E7E3DA700D2DDD8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104CC9D1E7E3DA700D2DDD8 /* DetailsViewController.swift */; };
 		6104CCA01E7E3DB100D2DDD8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104CC9F1E7E3DB100D2DDD8 /* MenuViewController.swift */; };
 		614114B81E7B2A80002E1232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614114B71E7B2A80002E1232 /* AppDelegate.swift */; };
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6104CC9B1E7E3D7600D2DDD8 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopInfoViewController.swift; sourceTree = "<group>"; };
 		6104CC9D1E7E3DA700D2DDD8 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		6104CC9F1E7E3DB100D2DDD8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		614114B41E7B2A80002E1232 /* Caffinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caffinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +91,6 @@
 			children = (
 				6104CC9D1E7E3DA700D2DDD8 /* DetailsViewController.swift */,
 				6104CC9F1E7E3DB100D2DDD8 /* MenuViewController.swift */,
-				6104CC9B1E7E3D7600D2DDD8 /* ShopInfoViewController.swift */,
 				614114B91E7B2A80002E1232 /* ViewController.swift */,
 			);
 			name = ViewControllers;
@@ -292,7 +289,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6104CC9C1E7E3D7600D2DDD8 /* ShopInfoViewController.swift in Sources */,
 				614114C01E7B2A80002E1232 /* Caffinator.xcdatamodeld in Sources */,
 				614114BA1E7B2A80002E1232 /* ViewController.swift in Sources */,
 				6104CCA01E7E3DB100D2DDD8 /* MenuViewController.swift in Sources */,

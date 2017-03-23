@@ -14,6 +14,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var setUpFlag = true
     
+    @IBOutlet weak var centerLocationButton: UIButton!
     @IBOutlet weak var segmentedController: UISegmentedControl!
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var menuView: UIView!
@@ -26,13 +27,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet var mapPortraitConstraint: NSLayoutConstraint!
     
     var mapLandscapeContraint: NSLayoutConstraint?
-    //var annotations = [ShopAnnotation]()
-    
-//    var annotationsSet = Set<ShopAnnotation>()
-//    
-//    // search
-//    var matchingItems: [MKMapItem] = [MKMapItem]()
-//    var lastSearchLocation: CLLocation?
     
     let manager = CLLocationManager()
     
@@ -48,6 +42,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                      constant: 0)
         mapLandscapeContraint?.isActive = true
         mapPortraitConstraint.isActive = false
+        hideDetails()
+        
         
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
@@ -78,12 +74,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let region = MKCoordinateRegion(center: (locations.last?.coordinate)!, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
         
+        // center the user's location once at startup
         if (setUpFlag) {
             mapView.setRegion(region, animated: false)
             setUpFlag = false
         }
         
-        mapView.addAnnotations(annotations!)
+        // show the button if the user's location is not centered
+        if (mapView.centerCoordinate.longitude != locations.last?.coordinate.longitude && mapView.centerCoordinate.latitude != locations.last?.coordinate.latitude) {
+            centerLocationButton.isHidden = false
+        }
+        
+        let mapLocation = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
+        // only add annotations that are within 200 meters from the center of the map
+        if let annotations = annotations {
+            for annotation in annotations {
+                let radius = 200.0 // meters
+                
+                let annotationLocation = CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
+                
+                if (mapLocation.distance(from: annotationLocation) > radius) {
+                    mapView.addAnnotation(annotation)
+                }
+            }
+        }
+        
+        // remove annotations farther than 400 meters away from the center of the map
+        for annotation in mapView.annotations {
+            let annotationLocation = CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
+            if (mapLocation.distance(from: annotationLocation) > 400.0) {
+                mapView.removeAnnotation(annotation)
+            }
+        }
+        
         
     }
     
@@ -108,7 +131,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
-            annotationView?.canShowCallout = false // MARK: - TODO
+            annotationView?.canShowCallout = false
         } else {
             annotationView?.annotation = annotation
         }
@@ -122,22 +145,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         guard !(view.annotation is MKUserLocation) else {
             return
         }
-        if UIDevice.current.orientation.isLandscape {
-            return
-        }
+        
         
         view.alpha = 0.5
+        
         detailsChildView?.shop = view.annotation as? ShopAnnotation
+        detailsChildView?.userLocation = mapView.userLocation.coordinate
         menuChildView?.shop = view.annotation as? ShopAnnotation
+        
         segmentedController.selectedSegmentIndex = 0
         detailsView.isHidden = false
         menuView.isHidden = true
         
-        // show details pane
-        UIView.animate(withDuration: 0.25) {
-            self.mapPortraitConstraint.isActive = true
-            self.mapLandscapeContraint?.isActive = false
-            self.view.layoutIfNeeded()
+        if !UIDevice.current.orientation.isLandscape {
+            
+            // show details pane
+            UIView.animate(withDuration: 0.25) {
+                self.mapPortraitConstraint.isActive = true
+                self.mapLandscapeContraint?.isActive = false
+                self.view.layoutIfNeeded()
+            }
         }
         
     }
@@ -151,9 +178,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             self.mapLandscapeContraint?.isActive = true
             self.view.layoutIfNeeded()
         }
+        hideDetails()
         
     }
     
+    func hideDetails() {
+        detailsView.isHidden = true
+        menuView.isHidden = true
+    }
+    
+    func showDetails() {
+        detailsView.isHidden = false
+        menuView.isHidden = false
+    }
     
     // MARK: - IBActions
     
@@ -170,48 +207,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    @IBAction func centerUserLocation(_ sender: Any) {
+        mapView.centerCoordinate = mapView.userLocation.coordinate
+        
+        centerLocationButton.isHidden = true
+    }
+    
+    
     // MARK: - Updating annotations
     
     func updateShops(data: Data?) {
         ShopAnnotation.dataToShops(data)
-        
-//        let frequency = 20.0 // meters
-//        let mapLocation = CLLocation(latitude: mapView.region.center.latitude, longitude: mapView.region.center.longitude)
-//        
-//        if (mapLocation.distance(from: lastSearchLocation!) > frequency) {
-//            search()
-//        }
     }
     
-//    func search() {
-//        let request = MKLocalSearchRequest()
-//        request.naturalLanguageQuery = "coffee"
-//        request.region = mapView.region
-//        lastSearchLocation = CLLocation(latitude: mapView.region.center.latitude, longitude: mapView.region.center.longitude)
-//        
-//        
-//        let search = MKLocalSearch(request: request)
-//        search.start { response, _ in
-//            guard let response = response else {
-//                return
-//            }
-//            self.matchingItems = response.mapItems
-//            self.updateAnnotations(items: response.mapItems)
-//            
-//        }
-//    }
-    
-//    func updateAnnotations(items: [MKMapItem]) {
-//        var newAnnotations = Set<ShopAnnotation>()
-//        for item in items {
-//            let newAnnotation = ShopAnnotation(title: item.name ?? "", subtitle: item.placemark.title ?? "", coordinate: item.placemark.coordinate)
-//            let newAnnotationView = MKPinAnnotationView(annotation: newAnnotation, reuseIdentifier: "coffeeAnnotation")
-//            newAnnotations.insert(newAnnotationView.annotation as! ShopAnnotation)
-//        }
-//        newAnnotations.subtract(annotationsSet)
-//        mapView.addAnnotations(Array(newAnnotations))
-//        annotationsSet = annotationsSet.union(newAnnotations)
-//    }
     
     // MARK: - Navigation
     
